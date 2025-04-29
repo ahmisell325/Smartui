@@ -292,7 +292,15 @@ label {
     background-color: hsl(var(--background) / 0.8);
     backdrop-filter: blur(12px);
     z-index: 100;
-    border-bottom: 1px solid hsl(var(--border));
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: hsl(var(--background) / 0.95);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid hsl(var(--border) / 0.5);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
 }
 
 .header-content {
@@ -361,6 +369,12 @@ label {
 
 .nav-link:hover::after, .nav-link.active::after {
     width: 100%;
+}
+
+/* Add active navigation link styles */
+.nav-link.active {
+    color: hsl(var(--primary));
+    font-weight: 600;
 }
 
 .header-actions {
@@ -462,22 +476,25 @@ label {
 /* Mobile navigation */
 .mobile-nav {
     position: fixed;
-    top: 0;
+    top: var(--header-height);
     right: 0;
-    height: 100vh;
-    width: 256px;
+    height: calc(100vh - var(--header-height));
+    width: 280px;
     background-color: hsl(var(--background));
     box-shadow: -8px 0 16px -4px rgba(0, 0, 0, 0.1);
-    display: flex;
+    display: none;
     flex-direction: column;
-    padding: 80px 24px 24px;
+    padding: 2rem 1.5rem;
     transform: translateX(100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
     z-index: 99;
+    overflow-y: auto;
+    opacity: 0;
 }
 
 .mobile-nav.active {
     transform: translateX(0);
+    opacity: 1;
 }
 
 .mobile-nav ul {
@@ -486,12 +503,29 @@ label {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 .mobile-nav .nav-link {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 0.75rem 1rem;
+    border-radius: var(--radius);
+    color: hsl(var(--foreground));
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.mobile-nav .nav-link:hover {
+    background-color: hsl(var(--muted));
+    color: hsl(var(--primary));
+    transform: translateX(5px);
+}
+
+.mobile-nav .nav-link.active {
+    background-color: hsl(var(--primary) / 0.1);
+    color: hsl(var(--primary));
+    font-weight: 600;
 }
 
 .mobile-cta {
