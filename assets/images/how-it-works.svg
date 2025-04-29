@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="stepGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="stepGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#14b8a6" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="stepGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="stepGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Step 1 -->
+  <g transform="translate(80, 80)">
+    <circle cx="60" cy="60" r="60" fill="url(#stepGradient1)"/>
+    <text x="60" y="65" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#6366f1" text-anchor="middle">1</text>
+    <text x="60" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">Register</text>
+    <path d="M120,60 L160,60" stroke="#cccccc" stroke-width="3" stroke-dasharray="5,5"/>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(240, 80)">
+    <circle cx="60" cy="60" r="60" fill="url(#stepGradient2)"/>
+    <text x="60" y="65" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#14b8a6" text-anchor="middle">2</text>
+    <text x="60" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">Configure</text>
+    <path d="M120,60 L160,60" stroke="#cccccc" stroke-width="3" stroke-dasharray="5,5"/>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(400, 80)">
+    <circle cx="60" cy="60" r="60" fill="url(#stepGradient3)"/>
+    <text x="60" y="65" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#f43f5e" text-anchor="middle">3</text>
+    <text x="60" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">Integrate</text>
+    <path d="M120,60 L160,60" stroke="#cccccc" stroke-width="3" stroke-dasharray="5,5"/>
+  </g>
+
+  <!-- Step 4 -->
+  <g transform="translate(560, 80)">
+    <circle cx="60" cy="60" r="60" fill="url(#stepGradient4)"/>
+    <text x="60" y="65" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#8b5cf6" text-anchor="middle">4</text>
+    <text x="60" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">Launch</text>
+  </g>
+
+  <!-- Additional details -->
+  <g transform="translate(40, 230)">
+    <rect x="20" y="0" width="140" height="80" rx="5" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="90" y="30" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#444444" text-anchor="middle">Sign up for an account</text>
+    <text x="90" y="50" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">Quick and easy process</text>
+    <text x="90" y="70" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">No credit card required</text>
+  </g>
+
+  <g transform="translate(200, 230)">
+    <rect x="20" y="0" width="140" height="80" rx="5" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="90" y="30" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#444444" text-anchor="middle">Set up your workspace</text>
+    <text x="90" y="50" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">Customize your dashboard</text>
+    <text x="90" y="70" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">Add team members</text>
+  </g>
+
+  <g transform="translate(360, 230)">
+    <rect x="20" y="0" width="140" height="80" rx="5" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="90" y="30" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#444444" text-anchor="middle">Connect your tools</text>
+    <text x="90" y="50" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">API integrations</text>
+    <text x="90" y="70" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">Workflow automation</text>
+  </g>
+
+  <g transform="translate(520, 230)">
+    <rect x="20" y="0" width="140" height="80" rx="5" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="90" y="30" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#444444" text-anchor="middle">Go live with your project</text>
+    <text x="90" y="50" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">Real-time monitoring</text>
+    <text x="90" y="70" font-family="Arial, sans-serif" font-size="12" fill="#666666" text-anchor="middle">24/7 expert support</text>
+  </g>
+</svg>
