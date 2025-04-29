@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="featureGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  
+  <circle cx="100" cy="100" r="80" fill="url(#featureGradient1)" />
+  
+  <!-- Dashboard Icon -->
+  <rect x="60" y="60" width="80" height="60" rx="4" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <rect x="60" y="60" width="80" height="15" rx="4" fill="#ffffff"/>
+  <rect x="70" y="85" width="25" height="25" rx="2" fill="#ffffff"/>
+  <rect x="105" y="85" width="25" height="25" rx="2" fill="#ffffff"/>
+  <line x1="65" y1="130" x2="135" y2="130" stroke="#ffffff" stroke-width="4"/>
+</svg>
