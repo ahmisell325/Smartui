@@ -506,7 +506,40 @@ label {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
+}
+
+@media (min-width: 480px) {
+    .header-actions {
+        gap: 1rem;
+    }
+}
+
+/* Style the Get Started button in header for better responsiveness */
+.header-actions .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    display: none; /* Hide on smallest devices */
+}
+
+@media (min-width: 480px) {
+    .header-actions .btn-primary {
+        display: inline-flex;
+    }
+}
+
+@media (min-width: 640px) {
+    .header-actions .btn-primary {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-actions .btn-primary {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 .icon-button, .theme-toggle {
@@ -674,8 +707,22 @@ label {
 }
 
 .mobile-cta {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     width: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(224, 35, 74, 0.2);
+}
+
+.mobile-cta:hover {
+    background-color: hsl(var(--primary) / 0.9);
+    transform: translateY(-2px);
 }
 
 /* Hero section */
