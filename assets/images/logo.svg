@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo Symbol -->
+  <rect x="5" y="5" width="30" height="30" rx="6" fill="url(#logoGradient)"/>
+  <path d="M15,20 L25,20 M20,15 L20,25" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Logo Text -->
+  <text x="45" y="25" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#333333">SmartUI</text>
+</svg>

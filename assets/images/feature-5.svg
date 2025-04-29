@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="featureGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  
+  <circle cx="100" cy="100" r="80" fill="url(#featureGradient5)" />
+  
+  <!-- Integration Icon -->
+  <circle cx="75" cy="75" r="25" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <circle cx="125" cy="125" r="25" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <line x1="93" y1="93" x2="107" y2="107" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M75,60 L75,50" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M60,75 L50,75" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M75,90 L75,100" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90,75 L100,75" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M125,110 L125,100" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M110,125 L100,125" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M125,140 L125,150" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M140,125 L150,125" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+</svg>

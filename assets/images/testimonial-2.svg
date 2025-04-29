@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="testimonialGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  
+  <circle cx="24" cy="24" r="24" fill="url(#testimonialGradient2)"/>
+  <circle cx="24" cy="19" r="7" fill="#ffffff"/>
+  <path d="M10,44 C10,34 38,34 38,44" fill="#ffffff"/>
+</svg>
