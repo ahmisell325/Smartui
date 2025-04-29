@@ -1089,6 +1089,7 @@ input:checked + .slider:before {
     font-size: 1.125rem;
     cursor: pointer;
     transition: color 0.2s ease;
+    color: hsl(var(--foreground));
 }
 
 .faq-question:hover {
@@ -1097,16 +1098,20 @@ input:checked + .slider:before {
 
 .faq-icon {
     transition: transform 0.3s ease;
+    color: hsl(var(--foreground));
 }
 
 .faq-question[aria-expanded="true"] .faq-icon {
     transform: rotate(180deg);
+    color: hsl(var(--primary));
 }
 
 .faq-answer {
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease;
+    color: hsl(var(--foreground));
+    opacity: 0.9;
 }
 
 .faq-answer[aria-hidden="false"] {
