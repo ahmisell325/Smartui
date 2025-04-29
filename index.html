@@ -738,59 +738,192 @@
         <section id="faq" class="faq-section">
             <div class="container">
                 <div class="section-header">
+                    <span class="section-badge">Customer Support</span>
                     <h2 class="section-title">Frequently Asked Questions</h2>
-                    <p class="section-description">Find answers to common questions about our platform.</p>
+                    <p class="section-description">Everything you need to know about our platform. Can't find the answer? <a href="#contact" class="text-link">Contact our support team</a>.</p>
                 </div>
                 
-                <div class="faq-accordion">
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>How do I get started with your platform?</span>
-                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                <div class="faq-container">
+                    <div class="faq-categories">
+                        <button class="faq-category-btn active" data-category="getting-started">
+                            <i class="fa-solid fa-rocket"></i>
+                            <span>Getting Started</span>
                         </button>
-                        <div class="faq-answer">
-                            <p>Getting started is easy! Simply click the "Get Started" button, create an account, and follow the onboarding process. Our setup wizard will guide you through configuring your workspace and inviting team members.</p>
-                        </div>
+                        <button class="faq-category-btn" data-category="pricing">
+                            <i class="fa-solid fa-tag"></i>
+                            <span>Pricing & Plans</span>
+                        </button>
+                        <button class="faq-category-btn" data-category="security">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Security</span>
+                        </button>
+                        <button class="faq-category-btn" data-category="support">
+                            <i class="fa-solid fa-headset"></i>
+                            <span>Support</span>
+                        </button>
                     </div>
                     
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Can I upgrade or downgrade my plan later?</span>
-                            <i class="fa-solid fa-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Yes, you can easily change your plan at any time from your account settings. When upgrading, you'll be charged the prorated difference for the remainder of your billing cycle. When downgrading, the new rate will apply at the start of your next billing cycle.</p>
+                    <div class="faq-content">
+                        <div class="faq-accordion" id="getting-started-faqs">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <div class="question-content">
+                                        <div class="question-icon">
+                                            <i class="fa-solid fa-circle-question"></i>
+                                        </div>
+                                        <span>How do I get started with your platform?</span>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Getting started is easy! Simply click the "Get Started" button, create an account, and follow the onboarding process. Our setup wizard will guide you through configuring your workspace and inviting team members.</p>
+                                    <div class="faq-answer-links">
+                                        <a href="#" class="faq-resource-link"><i class="fa-solid fa-play-circle"></i> Watch tutorial video</a>
+                                        <a href="#" class="faq-resource-link"><i class="fa-solid fa-file-alt"></i> Read setup guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <div class="question-content">
+                                        <div class="question-icon">
+                                            <i class="fa-solid fa-circle-question"></i>
+                                        </div>
+                                        <span>How long does implementation typically take?</span>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Most customers are up and running within 24 hours of signing up. Our implementation process is designed to be quick and hassle-free, with guided setup and pre-built templates to speed up your onboarding. Enterprise customers with complex requirements may take 3-5 days for full implementation with our dedicated onboarding team.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-accordion" id="pricing-faqs" style="display: none;">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <div class="question-content">
+                                        <div class="question-icon">
+                                            <i class="fa-solid fa-circle-question"></i>
+                                        </div>
+                                        <span>Can I upgrade or downgrade my plan later?</span>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, you can easily change your plan at any time from your account settings. When upgrading, you'll be charged the prorated difference for the remainder of your billing cycle. When downgrading, the new rate will apply at the start of your next billing cycle.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <div class="question-content">
+                                        <div class="question-icon">
+                                            <i class="fa-solid fa-circle-question"></i>
+                                        </div>
+                                        <span>Is there a free trial available?</span>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, we offer a 14-day free trial on all plans. No credit card is required to start your trial, and you'll have access to all features included in your selected plan.</p>
+                                    <div class="faq-answer-cta">
+                                        <a href="#pricing" class="btn btn-sm btn-outline">View Pricing Plans</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <div class="question-content">
+                                        <div class="question-icon">
+                                            <i class="fa-solid fa-circle-question"></i>
+                                        </div>
+                                        <span>Do you offer discounts for non-profits or educational institutions?</span>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, we offer special pricing for qualifying non-profit organizations, educational institutions, and startups. Contact our sales team to learn more about our discount programs and to see if your organization qualifies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-accordion" id="security-faqs" style="display: none;">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <div class="question-content">
+                                        <div class="question-icon">
+                                            <i class="fa-solid fa-circle-question"></i>
+                                        </div>
+                                        <span>How secure is my data on your platform?</span>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Security is our top priority. We use industry-standard encryption for all data, both in transit and at rest. Our infrastructure is hosted in SOC 2 compliant data centers, and we conduct regular security audits. Additionally, we offer features like two-factor authentication and single sign-on to enhance your account security.</p>
+                                    <div class="faq-answer-links">
+                                        <a href="#" class="faq-resource-link"><i class="fa-solid fa-lock"></i> View security whitepaper</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <div class="question-content">
+                                        <div class="question-icon">
+                                            <i class="fa-solid fa-circle-question"></i>
+                                        </div>
+                                        <span>Do you comply with GDPR and other privacy regulations?</span>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, our platform is fully compliant with GDPR, CCPA, and other major privacy regulations. We provide data processing agreements for customers who require them, and we offer features to help you maintain compliance, including data export and deletion capabilities.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-accordion" id="support-faqs" style="display: none;">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <div class="question-content">
+                                        <div class="question-icon">
+                                            <i class="fa-solid fa-circle-question"></i>
+                                        </div>
+                                        <span>What kind of support do you offer?</span>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Our support varies by plan. Starter plans include email support with a 24-hour response time. Professional plans receive priority email support with a 4-hour response time during business hours. Enterprise plans enjoy 24/7 dedicated support via email, chat, and phone, plus a dedicated customer success manager.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <div class="question-content">
+                                        <div class="question-icon">
+                                            <i class="fa-solid fa-circle-question"></i>
+                                        </div>
+                                        <span>Do you offer implementation assistance?</span>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, we provide implementation assistance for all customers. Professional and Enterprise plans include personalized onboarding sessions with our customer success team. Enterprise customers also receive a dedicated implementation specialist to ensure a smooth transition to our platform.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Is there a free trial available?</span>
-                            <i class="fa-solid fa-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Yes, we offer a 14-day free trial on all plans. No credit card is required to start your trial, and you'll have access to all features included in your selected plan.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>How secure is my data on your platform?</span>
-                            <i class="fa-solid fa-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Security is our top priority. We use industry-standard encryption for all data, both in transit and at rest. Our infrastructure is hosted in SOC 2 compliant data centers, and we conduct regular security audits. Additionally, we offer features like two-factor authentication and single sign-on to enhance your account security.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>What kind of support do you offer?</span>
-                            <i class="fa-solid fa-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Our support varies by plan. Starter plans include email support with a 24-hour response time. Professional plans receive priority email support with a 4-hour response time during business hours. Enterprise plans enjoy 24/7 dedicated support via email, chat, and phone, plus a dedicated customer success manager.</p>
-                        </div>
+                </div>
+                
+                <div class="faq-more">
+                    <p>Still have questions? Our support team is ready to help you.</p>
+                    <div class="faq-more-buttons">
+                        <a href="#contact" class="btn btn-primary">Contact Support</a>
+                        <a href="#" class="btn btn-outline">Browse Knowledge Base</a>
                     </div>
                 </div>
             </div>
