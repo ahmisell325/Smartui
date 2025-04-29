@@ -2153,8 +2153,76 @@ input:checked + .slider:before {
 /* How It Works Section */
 .how-it-works-section {
     padding: 6rem 0;
-    background-color: hsl(var(--background));
+    background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted) / 0.2));
     position: relative;
+}
+
+.how-it-works-progress {
+    margin: 3rem 0;
+    position: relative;
+}
+
+.progress-line {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary) / 0.3));
+    z-index: 1;
+}
+
+.progress-stages {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.progress-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.stage-indicator {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: hsl(var(--muted));
+    color: hsl(var(--muted-foreground));
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.progress-stage.active .stage-indicator {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    box-shadow: 0 0 0 4px hsl(var(--primary) / 0.25);
+}
+
+.progress-stage.completed .stage-indicator {
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+}
+
+.stage-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: hsl(var(--muted-foreground));
+    transition: all 0.3s ease;
+}
+
+.progress-stage.active .stage-name {
+    color: hsl(var(--primary));
+    font-weight: 600;
 }
 
 .how-it-works-content {
@@ -2162,11 +2230,63 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: center;
     gap: 4rem;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.how-it-works-visual {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
 }
 
 .how-it-works-image {
     max-width: 100%;
     height: auto;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.how-it-works-support {
+    position: absolute;
+    bottom: -1.5rem;
+    right: 1.5rem;
+    background-color: hsl(var(--card));
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    z-index: 2;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .how-it-works-support {
+        display: block;
+    }
+}
+
+.support-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background-color: hsl(var(--primary) / 0.1);
+    border-radius: 9999px;
+    color: hsl(var(--primary));
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.support-badge i {
+    font-size: 1rem;
+}
+
+.how-it-works-support p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
 }
 
 .steps-grid {
@@ -2174,6 +2294,7 @@ input:checked + .slider:before {
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
     width: 100%;
+    position: relative;
 }
 
 @media (min-width: 640px) {
@@ -2186,6 +2307,124 @@ input:checked + .slider:before {
     .steps-grid {
         grid-template-columns: repeat(4, 1fr);
     }
+}
+
+.step-card {
+    background-color: hsl(var(--card));
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    height: 100%;
+    opacity: 0.75;
+    transform: scale(0.95);
+}
+
+.step-card.active {
+    opacity: 1;
+    transform: scale(1);
+    border-color: hsl(var(--primary) / 0.5);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.8), hsl(var(--secondary) / 0.8));
+    color: hsl(var(--primary-foreground));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.step-number {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: hsl(var(--muted-foreground));
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.step-description {
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+    margin: 0;
+    flex-grow: 1;
+}
+
+.step-time {
+    font-size: 0.75rem;
+    color: hsl(var(--muted-foreground));
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px dashed hsl(var(--border));
+}
+
+.steps-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.step-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: hsl(var(--muted));
+    color: hsl(var(--foreground));
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.step-nav-btn:hover {
+    background-color: hsl(var(--primary) / 0.9);
+    color: hsl(var(--primary-foreground));
+    transform: translateY(-2px);
+}
+
+.how-it-works-cta {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.implementation-guarantee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: hsl(var(--foreground));
+    margin-bottom: 1.5rem;
+}
+
+.implementation-guarantee i {
+    color: hsl(var(--accent));
+}
+
+.how-it-works-cta .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
 }
 
 .step-card {
