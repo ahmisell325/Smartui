@@ -712,6 +712,15 @@ label {
     line-height: 1.15;
 }
 
+.gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
 @media (min-width: 768px) {
     .hero-title {
         font-size: 3.325rem;
