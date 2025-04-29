@@ -18,10 +18,30 @@ document.addEventListener('DOMContentLoaded', () => {
       // Use animation for smoother transition
       if (!mobileNav.classList.contains('active')) {
         // Opening the menu
-        mobileNav.style.display = 'block';
+        mobileNav.style.display = 'flex'; // Change to flex to match the flex-direction: column in CSS
+        
+        // Create an overlay for background dimming
+        const overlay = document.createElement('div');
+        overlay.className = 'mobile-nav-overlay';
+        overlay.style.position = 'fixed';
+        overlay.style.top = `${header.offsetHeight}px`;
+        overlay.style.left = '0';
+        overlay.style.right = '0';
+        overlay.style.bottom = '0';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        overlay.style.opacity = '0';
+        overlay.style.transition = 'opacity 0.3s ease';
+        overlay.style.zIndex = '98';
+        document.body.appendChild(overlay);
+        
         // Force a reflow to ensure the animation works
         mobileNav.offsetHeight;
         mobileNav.classList.add('active');
+        
+        // Fade in the overlay
+        setTimeout(() => {
+          overlay.style.opacity = '1';
+        }, 10);
         
         // Animate in each menu item with a slight delay between each
         const menuItems = mobileNav.querySelectorAll('a');
@@ -38,6 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         // Closing the menu - add a slight delay to allow for animation
         mobileNav.classList.remove('active');
+        
+        // Fade out the overlay
+        const overlay = document.querySelector('.mobile-nav-overlay');
+        if (overlay) {
+          overlay.style.opacity = '0';
+          
+          // Remove overlay after animation completes
+          setTimeout(() => {
+            document.body.removeChild(overlay);
+          }, 300);
+        }
         
         // Reset the menu item animations
         const menuItems = mobileNav.querySelectorAll('a');
@@ -80,6 +111,19 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger.classList.remove('active');
       mobileNav.classList.remove('active');
       hamburger.setAttribute('aria-expanded', false);
+      
+      // Fade out the overlay
+      const overlay = document.querySelector('.mobile-nav-overlay');
+      if (overlay) {
+        overlay.style.opacity = '0';
+        
+        // Remove overlay after animation completes
+        setTimeout(() => {
+          if (document.body.contains(overlay)) {
+            document.body.removeChild(overlay);
+          }
+        }, 300);
+      }
       
       // Reset the menu item animations
       const menuItems = mobileNav.querySelectorAll('a');
@@ -176,6 +220,18 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.classList.remove('active');
             mobileNav.classList.remove('active');
             hamburger.setAttribute('aria-expanded', false);
+            
+            // Remove overlay
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            if (overlay) {
+              overlay.style.opacity = '0';
+              setTimeout(() => {
+                if (document.body.contains(overlay)) {
+                  document.body.removeChild(overlay);
+                }
+              }, 300);
+            }
+            
             document.body.style.overflow = '';
           }
           
@@ -203,6 +259,18 @@ document.addEventListener('DOMContentLoaded', () => {
           hamburger.classList.remove('active');
           mobileNav.classList.remove('active');
           hamburger.setAttribute('aria-expanded', false);
+          
+          // Remove overlay
+          const overlay = document.querySelector('.mobile-nav-overlay');
+          if (overlay) {
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+              if (document.body.contains(overlay)) {
+                document.body.removeChild(overlay);
+              }
+            }, 300);
+          }
+          
           document.body.style.overflow = '';
           setTimeout(() => {
             hamburger.focus();
