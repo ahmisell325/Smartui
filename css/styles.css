@@ -35,6 +35,34 @@
     --sidebar-ring: 20 14.3% 4.1%;
 }
 
+/* Blue theme */
+[data-theme="blue"] {
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 239 84% 67%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 239 84% 67%;
+    --accent-foreground: 0 0% 100%;
+    --ring: 199 89% 48%;
+    --chart-1: 199 89% 48%;
+    --chart-2: 239 84% 67%;
+    --chart-5: 217 91% 60%;
+}
+
+/* Green theme */
+[data-theme="green"] {
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 152 76% 44%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 152 76% 44%;
+    --accent-foreground: 0 0% 100%;
+    --ring: 160 84% 39%;
+    --chart-1: 160 84% 39%;
+    --chart-2: 152 76% 44%;
+    --chart-3: 175 84% 32%;
+}
+
 .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
