@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progress-bar"></div>
+    
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2Z" fill="currentColor" fill-opacity="0.2"/>
+                            <path d="M23 16C23 19.866 19.866 23 16 23C12.134 23 9 19.866 9 16C9 12.134 12.134 9 16 9C19.866 9 23 12.134 23 16Z" fill="currentColor"/>
+                        </svg>
+                        <span>Company</span>
+                    </a>
+                </div>
+                
+                <nav class="nav-desktop">
+                    <ul>
+                        <li><a href="#features" class="nav-link">Features</a></li>
+                        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.93 4.93L6.34 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.66 17.66L19.07 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.34 17.66L4.93 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.07 4.93L17.66 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 12.79C20.8427 14.4922 20.2039 16.1144 19.1582 17.4668C18.1126 18.8192 16.7035 19.8458 15.0957 20.4265C13.4879 21.0073 11.748 21.1181 10.0795 20.7461C8.41104 20.3741 6.88302 19.5345 5.67425 18.3258C4.46548 17.117 3.62596 15.589 3.25401 13.9205C2.88207 12.252 2.99292 10.5121 3.57365 8.9043C4.15438 7.29651 5.18105 5.88737 6.53341 4.84175C7.88576 3.79614 9.50802 3.15731 11.21 3C10.2134 4.34827 9.73384 6.00945 9.85856 7.68141C9.98328 9.35338 10.7039 10.9251 11.8894 12.1106C13.075 13.2961 14.6466 14.0168 16.3186 14.1415C17.9906 14.2662 19.6518 13.7866 21 12.79Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    
+                    <button id="mobile-menu-toggle" class="hamburger" aria-label="Toggle mobile menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <nav id="mobile-nav" class="mobile-nav">
+        <ul>
+            <li><a href="#features" class="nav-link">Features</a></li>
+            <li><a href="#pricing" class="nav-link">Pricing</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+            <li><a href="#contact" class="btn btn-primary mobile-cta">Get Started</a></li>
+        </ul>
+    </nav>
+    
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title fade-in">Transform Your Business with Our Platform</h1>
+                        <p class="hero-description fade-in">Empower your team with cutting-edge tools designed to boost productivity, streamline operations, and drive growth.</p>
+                        <div class="hero-cta fade-in">
+                            <a href="#contact" class="btn btn-primary">Get Started</a>
+                            <a href="#features" class="btn btn-outline">Learn More</a>
+                        </div>
+                        <div class="hero-stats fade-in">
+                            <div class="stat-item">
+                                <span class="stat-number">10k+</span>
+                                <span class="stat-label">Active Users</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Customer Satisfaction</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image fade-in">
+                        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="50" y="50" width="300" height="200" rx="20" fill="hsl(var(--primary))" opacity="0.1"/>
+                            <rect x="80" y="80" width="240" height="140" rx="10" fill="hsl(var(--card))" stroke="hsl(var(--border))" stroke-width="2"/>
+                            <circle cx="200" cy="150" r="50" fill="hsl(var(--primary))" opacity="0.8"/>
+                            <path d="M180 150 L210 150 L195 180 Z" fill="hsl(var(--background))"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Key Features</h2>
+                    <p class="section-description">Discover the powerful tools and capabilities that set our platform apart.</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="feature-title">Lightning Fast</h3>
+                        <p class="feature-description">Experience blazing-fast performance with our optimized infrastructure.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-shield"></i>
+                        </div>
+                        <h3 class="feature-title">Secure & Reliable</h3>
+                        <p class="feature-description">Your data is protected with enterprise-grade security protocols.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="feature-title">Developer Friendly</h3>
+                        <p class="feature-description">Comprehensive API and documentation for seamless integration.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-title">Analytics</h3>
+                        <p class="feature-description">Gain valuable insights with detailed performance metrics and reporting.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="feature-title">Team Collaboration</h3>
+                        <p class="feature-description">Work together efficiently with robust collaboration features.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3 class="feature-title">Time-Saving</h3>
+                        <p class="feature-description">Automate repetitive tasks and focus on what matters most.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Simple, Transparent Pricing</h2>
+                    <p class="section-description">Choose the plan that fits your needs.</p>
+                </div>
+                
+                <div class="pricing-toggle">
+                    <span>Monthly</span>
+                    <label class="switch">
+                        <input type="checkbox" id="billing-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Annual <span class="discount">Save 20%</span></span>
+                </div>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3 class="pricing-title">Starter</h3>
+                        <div class="price-section">
+                            <span class="price monthly">$29</span>
+                            <span class="price annual">$23</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="pricing-description">Perfect for individuals and small teams getting started.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> Up to 5 users</li>
+                            <li><i class="fa-solid fa-check"></i> 10GB storage</li>
+                            <li><i class="fa-solid fa-check"></i> Basic analytics</li>
+                            <li><i class="fa-solid fa-check"></i> Email support</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline pricing-btn">Get Started</a>
+                    </div>
+                    
+                    <div class="pricing-card popular">
+                        <div class="badge">Popular</div>
+                        <h3 class="pricing-title">Professional</h3>
+                        <div class="price-section">
+                            <span class="price monthly">$79</span>
+                            <span class="price annual">$63</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="pricing-description">Ideal for growing businesses and teams.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> Up to 20 users</li>
+                            <li><i class="fa-solid fa-check"></i> 50GB storage</li>
+                            <li><i class="fa-solid fa-check"></i> Advanced analytics</li>
+                            <li><i class="fa-solid fa-check"></i> Priority support</li>
+                            <li><i class="fa-solid fa-check"></i> API access</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary pricing-btn">Get Started</a>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <div class="price-section">
+                            <span class="price monthly">$199</span>
+                            <span class="price annual">$159</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="pricing-description">For large organizations with advanced needs.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> Unlimited users</li>
+                            <li><i class="fa-solid fa-check"></i> 500GB storage</li>
+                            <li><i class="fa-solid fa-check"></i> Custom reporting</li>
+                            <li><i class="fa-solid fa-check"></i> 24/7 dedicated support</li>
+                            <li><i class="fa-solid fa-check"></i> Advanced security</li>
+                            <li><i class="fa-solid fa-check"></i> Custom integrations</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline pricing-btn" id="enterprise-btn">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-description">Success stories from businesses just like yours.</p>
+                </div>
+                
+                <div class="testimonials-slider" id="testimonials-slider">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"This platform transformed how our team collaborates. We've seen a 35% increase in productivity since implementing it."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="hsl(var(--muted))"/>
+                                        <circle cx="20" cy="15" r="7" fill="hsl(var(--muted-foreground))"/>
+                                        <path d="M6 35 C 6 25 34 25 34 35" fill="hsl(var(--muted-foreground))"/>
+                                    </svg>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Sarah Johnson</h4>
+                                    <p class="author-position">CTO, TechCorp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"The customer support team is exceptional. They helped us optimize our workflow and maximize the value of the platform."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="hsl(var(--muted))"/>
+                                        <circle cx="20" cy="15" r="7" fill="hsl(var(--muted-foreground))"/>
+                                        <path d="M6 35 C 6 25 34 25 34 35" fill="hsl(var(--muted-foreground))"/>
+                                    </svg>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">David Chen</h4>
+                                    <p class="author-position">Operations Manager, GrowFast</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"We evaluated several solutions and this was by far the most comprehensive and user-friendly option. It's been a game-changer for our business."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="hsl(var(--muted))"/>
+                                        <circle cx="20" cy="15" r="7" fill="hsl(var(--muted-foreground))"/>
+                                        <path d="M6 35 C 6 25 34 25 34 35" fill="hsl(var(--muted-foreground))"/>
+                                    </svg>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Emily Rodriguez</h4>
+                                    <p class="author-position">CEO, Innovate Inc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button id="prev-testimonial" class="testimonial-control-btn" aria-label="Previous testimonial">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <div class="testimonial-dots" id="testimonial-dots">
+                        <button class="dot active" data-index="0" aria-label="Testimonial 1"></button>
+                        <button class="dot" data-index="1" aria-label="Testimonial 2"></button>
+                        <button class="dot" data-index="2" aria-label="Testimonial 3"></button>
+                    </div>
+                    <button id="next-testimonial" class="testimonial-control-btn" aria-label="Next testimonial">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-description">Find answers to common questions about our platform.</p>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do I get started with your platform?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Getting started is easy! Simply click the "Get Started" button, create an account, and follow the onboarding process. Our setup wizard will guide you through configuring your workspace and inviting team members.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Can I upgrade or downgrade my plan later?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, you can easily change your plan at any time from your account settings. When upgrading, you'll be charged the prorated difference for the remainder of your billing cycle. When downgrading, the new rate will apply at the start of your next billing cycle.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Is there a free trial available?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we offer a 14-day free trial on all plans. No credit card is required to start your trial, and you'll have access to all features included in your selected plan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How secure is my data on your platform?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Security is our top priority. We use industry-standard encryption for all data, both in transit and at rest. Our infrastructure is hosted in SOC 2 compliant data centers, and we conduct regular security audits. Additionally, we offer features like two-factor authentication and single sign-on to enhance your account security.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What kind of support do you offer?</span>
+                            <i class="fa-solid fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our support varies by plan. Starter plans include email support with a 24-hour response time. Professional plans receive priority email support with a 4-hour response time during business hours. Enterprise plans enjoy 24/7 dedicated support via email, chat, and phone, plus a dedicated customer success manager.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Stay Updated</h2>
+                        <p>Subscribe to our newsletter for the latest product updates, industry insights, and exclusive offers.</p>
+                    </div>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        <div class="form-message" id="newsletter-message"></div>
+                        <p class="privacy-notice">By subscribing, you agree to our <a href="#">Privacy Policy</a>.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Transform Your Business?</h2>
+                    <p class="cta-description">Join thousands of satisfied customers who are already leveraging our platform to achieve their business goals.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">Get Started Today</a>
+                        <a href="#" class="btn btn-outline">Schedule a Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2Z" fill="currentColor" fill-opacity="0.2"/>
+                            <path d="M23 16C23 19.866 19.866 23 16 23C12.134 23 9 19.866 9 16C9 12.134 12.134 9 16 9C19.866 9 23 12.134 23 16Z" fill="currentColor"/>
+                        </svg>
+                        <span>Company</span>
+                    </div>
+                    <p class="footer-tagline">Empowering businesses to achieve more.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-group">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Integrations</a></li>
+                            <li><a href="#">Roadmap</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-group">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Guides</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-group">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-group">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">Compliance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Company. All rights reserved.</p>
+                <div class="language-selector">
+                    <select id="language-selector">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button id="cookie-customize" class="btn btn-outline btn-sm">Customize</button>
+                <button id="cookie-accept" class="btn btn-primary btn-sm">Accept All</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    
+    <!-- Plan Modal -->
+    <div id="plan-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Contact Sales</h3>
+                <button class="modal-close" aria-label="Close modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/theme.js"></script>
+    <script src="js/components/header.js"></script>
+    <script src="js/components/hero.js"></script>
+    <script src="js/components/features.js"></script>
+    <script src="js/components/pricing.js"></script>
+    <script src="js/components/testimonials.js"></script>
+    <script src="js/components/faq.js"></script>
+    <script src="js/components/newsletter.js"></script>
+    <script src="js/components/cookieBanner.js"></script>
+    <script src="js/components/backToTop.js"></script>
+    <script src="js/components/modal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
