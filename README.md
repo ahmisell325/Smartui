@@ -16,6 +16,3 @@ Smart UI is a modern, premium landing page designed to impress. Crafted with usa
 2. **Install Dependencies:** If applicable, run any provided build or setup commands.
 3. **Customize:** Open the files in your favorite code editor to update text, images, and styles.
 4. **Deploy:** Upload to your web server and test the landing page across different devices and browsers.
-
-## Licensing
-Smart UI is licensed for personal and commercial use under ThemeForest’s standard license. Please refer to the LICENSE.txt file for full details on permitted use.
